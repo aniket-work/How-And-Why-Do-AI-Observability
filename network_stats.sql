@@ -1,5 +1,3 @@
--- Save as network_stats.sql
-
 -- Event Types Distribution
 WITH event_types AS (
   SELECT

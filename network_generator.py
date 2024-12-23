@@ -1,15 +1,14 @@
-# Save this exactly as network_generator.py
-
 from observers.observers.models.openai import wrap_openai
 from observers.stores.duckdb import DuckDBStore
 from openai import OpenAI
 from datetime import datetime
 import random
 import time
+import duckdb
 
-# Specify database path explicitly
+# Specify database path and static table name
 DB_PATH = "network_events.db"
-
+STATIC_TABLE_NAME = "network_events_log"
 
 def generate_network_event():
     """Generate a simulated network event"""
@@ -36,7 +35,6 @@ def generate_network_event():
         event["risk_level"] = "low"
 
     return event
-
 
 def main():
     # Initialize the store with explicit database path
