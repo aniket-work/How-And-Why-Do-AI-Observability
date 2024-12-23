@@ -3,3 +3,6 @@ observers
 openai
 tenacity
 python-dotenv
+pandas
+plotly
+duckdb
